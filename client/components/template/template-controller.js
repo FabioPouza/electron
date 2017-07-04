@@ -4,7 +4,7 @@ angular.module('PackageGenerator')
 
         $scope.questions = [
             { type: 'input', inputType: 'text', placeholder: 'nome', value: 'nomePadrao' },
-            { type: 'input', inputType: 'password', placeholder: 'senha', },
+            { type: 'input', inputType: 'text', placeholder: 'senha', },
             { type: 'input', inputType: 'checkbox', label: { description: 'Deseja gerar um TEXTÃO?' }, value: true },
             {
                 id: 'versao-was', label: { description: 'Versão do WebSphere:' }, subQuestions: [
@@ -21,9 +21,11 @@ angular.module('PackageGenerator')
         ];
 
         $scope.gerar = function () {
-            $scope.questions.forEach(function (question) {
-                console.log(`question: ${question.id || question.$$hashKey}. value: ${question.value}`);
-            }, this);
+            converser($scope);
+
+            // $scope.questions.forEach(function (question) {
+            //     console.log(`question: ${question.id || question.$$hashKey}. value: ${question.value}`);
+            // }, this);
         };
 
     }]);
