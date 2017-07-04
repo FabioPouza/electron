@@ -1,0 +1,6 @@
+<label for="{{question.label.for || question.id || question.$$hashKey}}">{{question.label.description}}</label>
+
+<input id="{{question.id || question.$$hashKey}}" name="{{question.name}}" ng-if="question.type === 'input'" type="{{question.inputType}}"
+    ng-value="question.ngValue" placeholder="{{question.placeholder}}" ng-model="question[model]" ng-change="changeValue(question[model])">
+
+<pi-question ng-repeat="subQuestion in question.subQuestions" question="subQuestion" model="model" parent-question="question"></pi-question>

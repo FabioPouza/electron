@@ -1,0 +1,28 @@
+{
+                "action": "#",
+                "html": [
+                    {
+                        "type": "p",
+                        "html": "You must login"
+                    },
+                    {
+                        "name": "username",
+                        "id": "txt-username",
+                        "caption": "Username",
+                        "type": "text",
+                        "placeholder": "E.g. u...@Lucasdgordghom"
+                    },
+                    {
+                        "name": "password",
+                        "caption": "Password",
+                        "type": "password"
+                    },
+                    {
+                        "name": "btnEnviar",
+                        "id": "btnEnviar",
+                        "type": "submit",
+                        "text": "Login",
+                        "alert": "ola"
+                    }
+                ]
+            }
