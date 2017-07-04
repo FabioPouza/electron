@@ -20,6 +20,7 @@
     "electron": "~1.6.2"
   },
   "dependencies": {
+    "bluebird": "^3.5.0",
     "html-to-text": "^3.3.0"
   }
 }
