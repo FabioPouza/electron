@@ -7,10 +7,11 @@ function converser($scope) {
             console.log(question.label.description);
             console.log('( X )');
         }
+
         if (question.subQuestions) {
             console.log(question.label.description);
-            console.log('foi');
-            console.log(question.label.description);
+            console.log(question.value);
+
         }
     }, this);
     separator();
