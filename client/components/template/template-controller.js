@@ -61,7 +61,7 @@ angular.module('PackageGenerator')
 ];
 
         $scope.gerar = function () {
-            converser($scope);
+            converter($scope);
 
             //  $scope.questions.forEach(function (question) {
             //      console.log(`question: ${question.id || question.$$hashKey}. value: ${question.value}`);
