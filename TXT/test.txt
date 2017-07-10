@@ -1,13 +1,27 @@
-Nome: 1 
-Nome: 2 
-Nome: 3 
+CÓDIGO DO PROJETO/INCIDENTE: 
+DESCRIÇÃO DA MUDANÇA: 
+SERVIÇOS AFETADOS: 
+Pré-Requisito 
+N/A 
+1.Existe projeto aberto no DPCD 
+2.Tratamento nova faixa de código de junção. O aplicativo faz tratamento de codigo de junção de agência no range 1 a 3999 
+3.Ambientes afetados com a mudança 
+Internet - Servidores 
 Internet - Servidores true 
-Nome: 6 
-Nome: 7 
-Nome: 09 
+Servidores IBMHttpServer: 
+Servidores Fujitsu WebSphere WAS 6.1 IB CTI 
+Servidores Windows criptografia: 
+Servidores Windows transacional: 
+Servidores FAST ESP: 
+Corporativa - Seridores: 
 Corporativa - Seridores: true 
+Extranet - Servidores 
 Extranet - Servidores true 
+Extracorp - Servidores 
 Extracorp - Servidores true 
+Intranet - Servidores: 
 Intranet - Servidores: true 
+Departamental - Servidores 
 Departamental - Servidores true 
+Outro. Especifique 
 Outro. Especifique true 
