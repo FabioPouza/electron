@@ -3,6 +3,7 @@
 <input id="{{question.id || question.$$hashKey}}" name="{{question.name}}" ng-if="question.type === 'input'" type="{{question.inputType}}"
     ng-value="question.ngValue" placeholder="{{question.placeholder}}" ng-model="question[model]" ng-change="changeValue(question[model])">
 
-<textarea ng-if="question.type === 'textarea'" name="{{question.name}}" id="{{question.id || question.$$hashKey}}" cols="{{question.cols}}" rows="{{question.rows}}"></textarea> 
+<textarea ng-if="question.type === 'textarea'" name="{{question.name}}" class="{{question.class || question.$$hashKey}}"
+    cols="{{question.cols}}" ng-model="question[model]" rows="{{question.rows}}">{{question.value}}</textarea>
 
 <pi-question ng-repeat="subQuestion in question.subQuestions" question="subQuestion" model="model" parent-question="question"></pi-question>

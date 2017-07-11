@@ -6,24 +6,35 @@ var cont = 0;
 function converter($scope) {
     stringDoArquivo = null;
     $scope.questions.forEach(function (question) {
-        if (question.label) {
-            saveInputLabel(question);
-            console.log(question.label.description);
-        }
+        // if (question.label) {
+        //     saveInputLabel(question);
+        //     //console.log(question.label.description);
+        // }
         // if (question.inputType === 'text') {
         //     saveInputText(question);
+        //     console.log(question.value);
         // }
 
-        if (question.inputType === 'checkbox' && question.value === true) {
-            saveInputCheck(question);
-            //console.log(question.value);
-        }
+        // if (question.inputType === 'checkbox' && question.value === true) {
+        //     saveInputCheck(question);
+        //     console.log(question.value);
+        // }
         if (question.subQuestions) {
-            //saveInputRadio(question);
-            //console.log(question.label.description);
-            console.log(question.value);
+            saveInputRadio(question);
+
+            // console.log(object.value);
+            // console.log(object.subQuestions[cont].label);
+            // cont++;
+            //console.log(object.subQuestions);
+
+
         }
+        // if (question.type === 'textarea') {
+        //     saveInputTextArea(question);
+        //     console.log(question.value);
+        // }
     }, this);
+    //console.log(stringDoArquivo);
     fs.writeFile('./TXT/test.txt', stringDoArquivo, function (err, result) {
         if (err) {
             console.log(err);
@@ -38,7 +49,8 @@ function separator() {
 }
 
 function saveInputText(question) {
-    var linha = `${question.label.description} ${question.value} \n`;
+    var linha = `${question.value} \n`;
+    console.log(linha);
     if (!stringDoArquivo) {
         stringDoArquivo = linha;
     }
@@ -68,6 +80,30 @@ function saveInputLabel(question) {
 }
 
 function saveInputRadio(question) {
+    question.subQuestions.forEach(function (subQuestion) {
+        var linha;
+        console.log(subQuestion.label.description);
+        if (question.value === subQuestion.ngValue) {
+            linha = `(x ) ${subQuestion.label.description} \n`;
+        } else {
+            if (subQuestion.value) {
+                linha = `(x ) ${subQuestion.label.description}: ${subQuestion.value} \n`;
+            } else {
+
+                linha = `( ) ${subQuestion.label.description} \n`;
+            }
+        }
+        if (!stringDoArquivo) {
+            stringDoArquivo = linha;
+        }
+        else {
+            stringDoArquivo += linha;
+        }
+    })
+
+}
+
+function saveInputTextArea(question) {
     var linha = `${question.value} \n`;
     if (!stringDoArquivo) {
         stringDoArquivo = linha;

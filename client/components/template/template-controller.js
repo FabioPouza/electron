@@ -4,10 +4,8 @@ angular.module('PackageGenerator')
 
         $scope.questions = [
             { "type": "input", "inputType": "text", "label": { "description": "CÓDIGO DO PROJETO/INCIDENTE:" } },
-            { "label": { "description": "DESCRIÇÃO DA MUDANÇA:" } },
-            { "type": "input", "inputType": "text" },
-            { "label": { "description": "SERVIÇOS AFETADOS:" } },
-            { "type": "input", "inputType": "text" },
+            { "type": "input", "inputType": "text", "label": { "description": "DESCRIÇÃO DA MUDANÇA:" } },
+            { "type": "input", "inputType": "text", "label": { "description": "SERVIÇOS AFETADOS:" } },
             { "label": { "description": "Pré-Requisito" } },
             { "label": { "description": "N/A" } },
             {
@@ -18,9 +16,8 @@ angular.module('PackageGenerator')
                     },
                     {
                         "id": "naoDpcd", "type": "input", "inputType": "text",
-                        "label": { "for": "naoDpcd", "description": "Sim, Informe o numero do projeto" }, "ngValue": "Não"
+                        "label": { "for": "naoDpcd", "description": "Sim, Informe o numero do projeto" }, "ngValue": "SIM"
                     },
-                    {},
                 ]
             },
             {
@@ -42,15 +39,12 @@ angular.module('PackageGenerator')
             { "label": { "description": "3.Ambientes afetados com a mudança" } },
             { "type": "input", "inputType": "checkbox", "label": { "description": "Internet - Servidores" }, "value": true },
             { "label": { "description": "Servidores IBMHttpServer:" } },
-            { "type": "textarea", "name": "servidores", "id": "servidores", "rows": "4", "cols": "50" },
+            { "type": "textarea", "name": "servidores", "class": "servidores", "rows": "4", "cols": "50", "value": "5555" },
             { "label": { "description": "Servidores Fujitsu WebSphere WAS 6.1 IB CTI" } },
-            { "type": "textarea", "name": "servidores", "id": "servidores", "rows": "4", "cols": "50" },
-            { "label": { "description": "Servidores Windows criptografia:" } },
-            { "type": "input", "inputType": "text" },
-            { "label": { "description": "Servidores Windows transacional:" } },
-            { "type": "input", "inputType": "text" },
-            { "label": { "description": "Servidores FAST ESP:" } },
-            { "type": "input", "inputType": "text" },
+            { "type": "textarea", "name": "servidores", "class": "servidores", "rows": "4", "cols": "50" },
+            { "type": "input", "inputType": "text", "label": { "description": "Servidores Windows criptografia:" } },
+            { "type": "input", "inputType": "text", "label": { "description": "Servidores Windows transacional:" } },
+            { "type": "input", "inputType": "text", "label": { "description": "Servidores FAST ESP:" } },
             { "type": "input", "inputType": "checkbox", "label": { "description": "Corporativa - Seridores:" }, "value": true },
             { "type": "input", "inputType": "checkbox", "label": { "description": "Extranet - Servidores" }, "value": true },
             { "type": "input", "inputType": "checkbox", "label": { "description": "Extracorp - Servidores" }, "value": true },
