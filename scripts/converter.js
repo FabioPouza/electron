@@ -4,7 +4,7 @@ var stringDoArquivo;
 var cont = 0;
 
 function converter($scope) {
-    stringDoArquivo = null;
+    stringDoArquivo = "";
     $scope.questions.forEach(function (question) {
         // if (question.label) {
         //     saveInputLabel(question);
@@ -60,7 +60,7 @@ function saveInputText(question) {
 }
 
 function saveInputCheck(question) {
-    var linha = `${question.label.description} ${question.value} \n`;
+    var linha = `${question.value} \n`;
     if (!stringDoArquivo) {
         stringDoArquivo = linha;
     }
@@ -80,13 +80,13 @@ function saveInputLabel(question) {
 }
 
 function saveInputRadio(question) {
+    var linha;
     question.subQuestions.forEach(function (subQuestion) {
-        var linha;
         console.log(subQuestion.label.description);
         if (question.value === subQuestion.ngValue) {
             linha = `(x ) ${subQuestion.label.description} \n`;
         } else {
-            if (subQuestion.value) {
+            if (subQuestion.inputType === 'text' && subQuestion.value) {
                 linha = `(x ) ${subQuestion.label.description}: ${subQuestion.value} \n`;
             } else {
 

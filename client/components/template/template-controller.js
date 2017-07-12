@@ -16,7 +16,7 @@ angular.module('PackageGenerator')
                     },
                     {
                         "id": "naoDpcd", "type": "input", "inputType": "text",
-                        "label": { "for": "naoDpcd", "description": "Sim, Informe o numero do projeto" }, "ngValue": "SIM"
+                        "label": { "for": "naoDpcd", "description": "Sim, Informe o numero do projeto" }, "ngValue": ""
                     },
                 ]
             },
@@ -54,6 +54,7 @@ angular.module('PackageGenerator')
         ];
 
         $scope.gerar = function () {
+            console.log($scope);
             converter($scope);
 
             //  $scope.questions.forEach(function (question) {

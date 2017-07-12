@@ -23,9 +23,18 @@ angular.module('PackageGenerator', ['ngAnimate', "ngCookies", 'ngRoute', 'ngReso
             restrict: 'E',
             templateUrl: 'client/shared/directives/piQuestion.html',
             controller: function ($scope) {
+
+                $scope.$watch('question.value', function (value) {
+                    console.log('ola', value);
+                });
+
+
+
+
                 $scope.changeValue = function (value) {
                     if ($scope.parentQuestion) {
                         $scope.parentQuestion[$scope.model] = value;
+                        console.log('colocou no parent', value);
                     }
                 };
             },
