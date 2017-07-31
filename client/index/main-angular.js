@@ -23,13 +23,14 @@ angular.module('PackageGenerator', ['ngAnimate', "ngCookies", 'ngRoute', 'ngReso
             restrict: 'E',
             templateUrl: 'client/shared/directives/piQuestion.html',
             controller: function ($scope) {
+                // console.log('scope da diretiva', $scope);
+                // console.log('scope do ng-repeat', $scope.$parent);
+                // console.log('scope do template controller', $scope.$parent.$parent);
+                // console.log('------------------------------------------------');
 
-                $scope.$watch('question.value', function (value) {
-                    console.log('ola', value);
-                });
-
-
-
+                // $scope.$watch('question.value', function (value) {
+                //     console.log('ola', value);
+                // });
 
                 $scope.changeValue = function (value) {
                     if ($scope.parentQuestion) {

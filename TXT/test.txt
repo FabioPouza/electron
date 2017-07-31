@@ -1,5 +1,0 @@
-(x ) Não 
-( ) Sim, Informe o numero do projeto 
-( ) Não 
-( ) Sim, Já foi alterado para tratar agencia em quanquer range 
-(x ) Sim, Não foi alterado para tratar agencia em quanquer range 

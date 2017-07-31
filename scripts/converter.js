@@ -4,21 +4,21 @@ var stringDoArquivo;
 var cont = 0;
 
 function converter($scope) {
-    stringDoArquivo = "";
+    stringDoArquivo = null;
     $scope.questions.forEach(function (question) {
-        // if (question.label) {
-        //     saveInputLabel(question);
-        //     //console.log(question.label.description);
-        // }
-        // if (question.inputType === 'text') {
-        //     saveInputText(question);
-        //     console.log(question.value);
-        // }
+        if (question.label) {
+            saveInputLabel(question);
+            //console.log(question.label.description);
+        }
+        if (question.inputType === 'text') {
+            saveInputText(question);
+            //console.log(question.value);
+        }
 
-        // if (question.inputType === 'checkbox' && question.value === true) {
-        //     saveInputCheck(question);
-        //     console.log(question.value);
-        // }
+        if (question.inputType === 'checkbox' && question.value === true) {
+            saveInputCheck(question);
+            //console.log(question.value);
+        }
         if (question.subQuestions) {
             saveInputRadio(question);
 
@@ -29,10 +29,10 @@ function converter($scope) {
 
 
         }
-        // if (question.type === 'textarea') {
-        //     saveInputTextArea(question);
-        //     console.log(question.value);
-        // }
+        if (question.type === 'textarea') {
+            saveInputTextArea(question);
+            //console.log(question.value);
+        }
     }, this);
     //console.log(stringDoArquivo);
     fs.writeFile('./TXT/test.txt', stringDoArquivo, function (err, result) {
@@ -50,7 +50,6 @@ function separator() {
 
 function saveInputText(question) {
     var linha = `${question.value} \n`;
-    console.log(linha);
     if (!stringDoArquivo) {
         stringDoArquivo = linha;
     }
@@ -82,8 +81,8 @@ function saveInputLabel(question) {
 function saveInputRadio(question) {
     var linha;
     question.subQuestions.forEach(function (subQuestion) {
-        console.log(subQuestion.label.description);
-        if (question.value === subQuestion.ngValue) {
+        //console.log(subQuestion.label.description);
+        if (question.value === subQuestion.value) {
             linha = `(x ) ${subQuestion.label.description} \n`;
         } else {
             if (subQuestion.inputType === 'text' && subQuestion.value) {
