@@ -1,9 +1,14 @@
 "use strict";
+var environment = 'http://localhost:3010';
+var template = environment + '/template';
+
 angular.module('PackageGenerator')
     .controller('TemplateController', ['$scope', '$http', function ($scope, $http) {
 
 
-        $http.get('http://10.100.78.21/template/template.json',
+
+
+        $http.get(template + '/template.json',
             {
                 headers: { 'Content-Type': 'application/json' },
                 encoding: null

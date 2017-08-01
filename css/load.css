@@ -1,5 +1,15 @@
-    input,
-    label {
-        display: block;
-        margin-bottom: 5px;
-    }
+
+.alinhamento-pi{
+    float: left;
+    margin-left: 20%;   
+}
+
+.alinhamento-up{
+    float: left;
+
+}
+
+.botoes{
+    padding-left: 50px;
+    padding-top: 300px;
+}

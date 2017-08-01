@@ -3,7 +3,6 @@
 
 <head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/load.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.7/angular.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.7/angular-cookies.min.js"></script>
@@ -12,7 +11,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.7/angular-resource.min.js"></script>
     <script src="client/index/main-angular.js"></script>
     <script src="client/index/app-controller.js"></script>
-    <script src="client/shared/home/home-controller.js"></script>
     <script src="client/components/template/template-controller.js"></script>
 
 
@@ -21,16 +19,14 @@
 
 <body ng-controller="AppController">
 
-    <div ng-include="home"></div>
-
-
+    <div ng-include="templateUrl"></div>
 
     <!-- Load jQuery and the minified plugin -->
-    <script type="text/javascript" src="scripts/lib/bootstrap.min.js"></script>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script type="text/javascript" src="scripts/lib/jquery.dform-1.1.0.min.js"></script>
     <script type="text/javascript" src="scripts/load.js"></script>
     <script type="text/javascript" src="scripts/converter.js"></script>
+    <script src="teste.js"></script>
 
 </body>
 

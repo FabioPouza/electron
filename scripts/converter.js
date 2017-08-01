@@ -22,11 +22,6 @@ function converter($scope) {
         if (question.subQuestions) {
             saveInputRadio(question);
 
-            // console.log(object.value);
-            // console.log(object.subQuestions[cont].label);
-            // cont++;
-            //console.log(object.subQuestions);
-
 
         }
         if (question.type === 'textarea') {
@@ -83,13 +78,13 @@ function saveInputRadio(question) {
     question.subQuestions.forEach(function (subQuestion) {
         //console.log(subQuestion.label.description);
         if (question.value === subQuestion.value) {
-            linha = `(x ) ${subQuestion.label.description} \n`;
+            //linha = `(x ) ${subQuestion.label.description} \n`;
         } else {
             if (subQuestion.inputType === 'text' && subQuestion.value) {
-                linha = `(x ) ${subQuestion.label.description}: ${subQuestion.value} \n`;
+                //linha = `(x ) ${subQuestion.label.description}: ${subQuestion.value} \n`;
             } else {
 
-                linha = `( ) ${subQuestion.label.description} \n`;
+                //linha = `( ) ${subQuestion.label.description} \n`;
             }
         }
         if (!stringDoArquivo) {

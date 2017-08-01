@@ -1,0 +1,17 @@
+<div ng-controller="HomeController">
+    <div class="alinhamento-up">
+        <h3>Upload de P.I</h3>
+        <div class="botoes btn-group" role="group">
+            <input type="file" id="txtFile" class="btn btn-default"></input>
+            <button class="btn btn-default">Upload</button>
+        </div>
+    </div>
+
+    <div class="alinhamento-pi">
+        <h3>Lista de P.I's</h3>
+        <ul class="list-group">
+            <li class="list-group-item" ng-repeat="pi in pis">{{pi}}</li>
+        </ul>
+
+    </div>
+</div>
