@@ -1,5 +1,5 @@
 'use strict';
-angular.module('PackageGenerator', ['ngAnimate', "ngCookies", 'ngRoute', 'ngResource'])
+angular.module('PackageGenerator', ['ngAnimate', 'ngFileUpload', "ngCookies", 'ngRoute', 'ngResource'])
     .directive("fileread", [function () {
         return {
             scope: {

@@ -2,8 +2,8 @@
     <div class="alinhamento-up">
         <h3>Upload de P.I</h3>
         <div class="botoes btn-group" role="group">
-            <input type="file" id="txtFile" class="btn btn-default"></input>
-            <button class="btn btn-default">Upload</button>
+            <button ngf-select ng-model="picFile" accept="*.json" class="btn btn-default">Selecione o json</button>
+            <button class="btn btn-default" ng-click="enviar()">Upload</button>
         </div>
     </div>
 
