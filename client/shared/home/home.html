@@ -9,9 +9,15 @@
 
     <div class="alinhamento-pi">
         <h3>Lista de P.I's</h3>
-        <ul class="list-group">
-            <li class="list-group-item" ng-repeat="pi in pis">{{pi}}</li>
-        </ul>
+
+        <div class="botoes">
+            <select class="btn btn-default" ng-model="piSelecionado">
+                <option value="" ng-repeat="pi in pis" ng-selected="">{{pi}}</option>
+            </select>
+
+            <button class="btn btn-default" ng-click="carregar(piSelecionado)">Carregar PI</button>
+        </div>
+
 
     </div>
 </div>

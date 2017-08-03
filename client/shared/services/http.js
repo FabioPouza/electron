@@ -14,7 +14,6 @@ angular.module('PackageGenerator').factory('uploadPi', ['$http', function ($http
             }
 
             return $http(req);
-            //return $http.post('http://localhost:3010/lista', json)
         }
     };
 }]);

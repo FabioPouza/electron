@@ -3,12 +3,12 @@ var environment = 'http://localhost:3010';
 var template = environment + '/template';
 
 angular.module('PackageGenerator')
-    .controller('TemplateController', ['$scope', '$http', function ($scope, $http) {
+    .controller('TemplateController', ['$scope', '$http', '$routeParams', function ($scope, $http, $routeParams) {
 
 
+        var piSelecionado = $routeParams.piSelecionado;
 
-
-        $http.get(template + '/template.json',
+        $http.get(template + piSelecionado,
             {
                 headers: { 'Content-Type': 'application/json' },
                 encoding: null

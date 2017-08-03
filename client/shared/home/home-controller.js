@@ -1,6 +1,6 @@
 "use strict";
 angular.module('PackageGenerator')
-    .controller('HomeController', ['$scope', '$http', 'uploadPi', function ($scope, $http, uploadPi) {
+    .controller('HomeController', ['$scope', '$http', 'uploadPi', '$location', function ($scope, $http, uploadPi, $location) {
 
         $scope.pis = []
 
@@ -21,6 +21,11 @@ angular.module('PackageGenerator')
                     carregaListaDePis();
                 });
 
+        }
+
+        $scope.carregar = function (pi) {
+            $location.path("/template/" + pi);
+            console.log($scope.piSelecionado);
         }
 
         carregaListaDePis();

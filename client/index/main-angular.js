@@ -1,5 +1,20 @@
 'use strict';
 angular.module('PackageGenerator', ['ngAnimate', 'ngFileUpload', "ngCookies", 'ngRoute', 'ngResource'])
+    .config(['$routeProvider', function ($routeProvider) {
+
+        $routeProvider.when('/template/:piSelecionado', {
+            templateUrl: 'client/components/template/template.html',
+            controller: 'TemplateController'
+        });
+
+        $routeProvider.when('/home', {
+            templateUrl: 'client/shared/home/home.html',
+            controller: 'HomeController'
+        });
+
+        $routeProvider.otherwise({ redirectTo: '/home' });
+
+    }])
     .directive("fileread", [function () {
         return {
             scope: {

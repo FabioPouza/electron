@@ -69,16 +69,16 @@ app.on('ready', function () {
   // const menu = Menu.buildFromTemplate(menuTemplate);
 
 
-  // const menu = new Menu();
+  const menu = new Menu();
 
-  // menu.append(new MenuItem({
-  //   label: 'teste',
+  menu.append(new MenuItem({
+    label: 'Arquivos',
 
-  // }));
-  // menu.append(new MenuItem({
-  //   label: 'Menu 2',
-  // }));
+  }));
+  menu.append(new MenuItem({
+    label: 'Ajuda',
+  }));
 
-  // Menu.setApplicationMenu(menu);
+  Menu.setApplicationMenu(menu);
 
 });
