@@ -1,23 +1,3 @@
 <div ng-controller="HomeController">
-    <div class="alinhamento-up">
-        <h3>Upload de P.I</h3>
-        <div class="botoes btn-group" role="group">
-            <button ngf-select ng-model="picFile" accept="*.json" class="btn btn-default">Selecione o json</button>
-            <button class="btn btn-default" ng-click="enviar()">Upload</button>
-        </div>
-    </div>
-
-    <div class="alinhamento-pi">
-        <h3>Lista de P.I's</h3>
-
-        <div class="botoes">
-            <select class="btn btn-default" ng-model="piSelecionado">
-                <option value="" ng-repeat="pi in pis" ng-selected="">{{pi}}</option>
-            </select>
-
-            <button class="btn btn-default" ng-click="carregar(piSelecionado)">Carregar PI</button>
-        </div>
-
-
-    </div>
+    <div ng-include="listarPis"></div>
 </div>

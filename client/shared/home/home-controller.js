@@ -3,6 +3,7 @@ angular.module('PackageGenerator')
     .controller('HomeController', ['$scope', '$http', 'uploadPi', '$location', function ($scope, $http, uploadPi, $location) {
 
         $scope.pis = []
+        $scope.listarPis = 'client/components/listarPis/listarPis.html';
 
         function carregaListaDePis() {
             $http.get('http://localhost:3010/lista')
@@ -25,7 +26,7 @@ angular.module('PackageGenerator')
 
         $scope.carregar = function (pi) {
             $location.path("/template/" + pi);
-            console.log($scope.piSelecionado);
+            console.log('/template/' + pi);
         }
 
         carregaListaDePis();
